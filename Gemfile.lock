@@ -58,6 +58,8 @@ GEM
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    faker (0.9.5)
+      i18n (~> 0.4)
     ffi (0.6.3)
       rake (>= 0.8.7)
     gherkin (2.3.3)
@@ -69,6 +71,7 @@ GEM
     launchy (0.3.7)
       configuration (>= 0.0.5)
       rake (>= 0.8.1)
+    machinist (2.0.0.beta2)
     mail (2.2.14)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
@@ -136,8 +139,10 @@ DEPENDENCIES
   cucumber
   cucumber-rails
   database_cleaner
+  faker
   haml
   launchy
+  machinist (>= 2.0.0.beta2)
   mysql
   rails (= 3.0.3)
   rspec-rails (>= 2.0.0.beta.22)
