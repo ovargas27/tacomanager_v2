@@ -2,12 +2,13 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.3'
 gem 'haml'
-gem 'compass', '>= 0.10.5'
+gem 'compass', '>= 0.10.6'
 gem "mysql"
 
 group :development, :test do
-  gem 'webrat'
   gem 'rspec-rails', '>= 2.0.0.beta.22'
+  gem 'capybara'
+  gem 'steak'
 end
 
 group :cucumber do
