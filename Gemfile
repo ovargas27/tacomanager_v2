@@ -4,6 +4,7 @@ gem 'rails', '3.0.3'
 gem 'haml'
 gem 'compass', '>= 0.10.6'
 gem "mysql"
+gem 'jquery-rails', '>= 0.2.6'
 
 group :development, :test do
   gem 'rspec-rails', '>= 2.0.0.beta.22'
