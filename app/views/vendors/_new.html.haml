@@ -1,0 +1,10 @@
+= form_for vendor, :remote => true do |form|
+  #errors
+  %p
+    = label_tag 'Name'
+    = form.text_field :name
+  %p
+    = label_tag 'Phone'
+    = form.text_field :phone
+  %p
+    = form.submit

@@ -1,0 +1,7 @@
+<% unless @vendor.errors.empty? %>
+  $('#errors').html('<%= errors_for @vendor %>');
+<% else %>
+  $('#vendors').prepend("<%= escape_javascript(render @vendor) %>");
+  $.fancybox.close();
+  $('#vendor_<%= @vendor.id %> .edit a').fancybox();
+<% end %>

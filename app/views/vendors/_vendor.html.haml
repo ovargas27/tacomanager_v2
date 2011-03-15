@@ -1,2 +1,7 @@
-.vendor
-  = vendor.name
+.vendor{:id => "vendor_#{vendor.id}"}
+  %span.name
+    = vendor.name
+  %span.phone
+    = vendor.phone
+  %span.edit
+    = link_to "edit", edit_vendor_path(vendor), :class => 'fancybox'
