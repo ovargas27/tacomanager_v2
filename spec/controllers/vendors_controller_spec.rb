@@ -15,22 +15,7 @@ describe VendorsController do
       vendor = Vendor.new()
       Vendor.should_receive(:new).and_return(vendor)
       get 'index'
-      assigns(:vendor).should_not be_nil
+      assigns(:new_vendor).should_not be_nil
     end
   end
-
-  describe "GET 'show'" do
-    it "should be successful" do
-      get 'show'
-      response.should be_success
-    end
-  end
-
-  describe "GET 'edit'" do
-    it "should be successful" do
-      get 'edit'
-      response.should be_success
-    end
-  end
-
 end
