@@ -11,10 +11,6 @@ class VendorsController < ApplicationController
     @vendor.save
   end
 
-  def edit
-    render :layout => false
-  end
-  
   def update
     @vendor.update_attributes(params[:vendor])
   end

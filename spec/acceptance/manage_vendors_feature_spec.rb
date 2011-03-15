@@ -6,10 +6,6 @@ feature "Manage Vendors Feature", %q{
   I want to Create, Read, Update and Delete vendors
 } do
 
-  scenario "new vendor" do
-    pending ''
-  end
-
   scenario "index" do
     vendor2 = Vendor.make!(:name => 'beta')
     visit vendors_index
