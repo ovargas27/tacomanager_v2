@@ -8,5 +8,4 @@ require 'faker'
 
 Vendor.blueprint do
   name { "vendor#{sn}" }
-  description{ Faker::Lorem.words(2).join(' ') } 
 end

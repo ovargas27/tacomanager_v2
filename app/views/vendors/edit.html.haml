@@ -1,8 +1,8 @@
-= form_for @vendor, :remote => true do |form|
+= form_for @vendor, :method => :put, :remote => true do |form|
   #errors
   %h2= @vendor.name
   %p
-    = label_tag 'Phone'
+    = form.label :phone, 'Phone'
     = form.text_field :phone
   %p
-    = form.submit
+    = form.submit 'Update'

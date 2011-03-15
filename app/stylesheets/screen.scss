@@ -47,3 +47,12 @@ body.two-col {
     $content-columns: ceil(2 * $blueprint-grid-columns / 3);
     // true means it's the last column in the row
     @include column($content-columns, true); } }
+.edit{
+  display: none;
+}
+.edited{
+  background-color: #FEF5CA ;
+}
+.new{
+  background-color: #EEF3E2 ;
+}

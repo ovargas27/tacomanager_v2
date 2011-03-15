@@ -1,7 +1,24 @@
 .vendor{:id => "vendor_#{vendor.id}"}
-  %span.name
-    = vendor.name
-  %span.phone
-    = vendor.phone
-  %span.edit
-    = link_to "edit", edit_vendor_path(vendor), :class => 'fancybox'
+  .show
+    %span.name
+      = vendor.name
+    %span.phone
+      = vendor.phone
+    %span
+      = link_to "edit", edit_vendor_path(vendor), :class => 'editablebox'
+    %span
+      = link_to "delete", vendor_path(vendor), :method => :delete, :remote => true
+  .edit
+    = form_for vendor, :remote => true do |form|
+      #errors
+      %h2= vendor.name
+      %p
+        = form.label :phone, 'Phone'
+        = form.text_field :phone
+      %p
+        = form.submit 'Update'
+
+:javascript
+  $(document).ready(function () {
+    $('#vendor_#{vendor.id}').editable();
+  });

@@ -1,0 +1,5 @@
+<% unless @vendor.errors.empty? %>
+  $('#errors').html('<%= errors_for @vendor %>');
+<% else %>
+  $('#vendor_<%= @vendor.id %> .show').hide();
+<% end %>

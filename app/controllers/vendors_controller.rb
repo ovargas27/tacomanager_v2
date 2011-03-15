@@ -1,5 +1,5 @@
 class VendorsController < ApplicationController
-  before_filter :find_vendor, :only => [:edit, :update]
+  before_filter :find_vendor, :only => [:edit, :update, :destroy]
   before_filter :new_vendor, :only => [:index, :create]
   
   def index
@@ -7,6 +7,7 @@ class VendorsController < ApplicationController
   end
 
   def create
+    @vendor = Vendor.new(params[:vendor])
     @vendor.save
   end
 
@@ -17,12 +18,15 @@ class VendorsController < ApplicationController
   def update
     @vendor.update_attributes(params[:vendor])
   end
+
+  def destroy
+    @vendor.destroy
+  end
   
   private
 
   def new_vendor
-    params[:vendor] ||= {:name => 'Vendors name', :phone => '(312) 000-0000' }
-    @vendor = Vendor.new(params[:vendor])
+    @new_vendor = Vendor.new(:name => 'Vendors name', :phone => '(312) 000-0000') 
   end
 
   def find_vendor

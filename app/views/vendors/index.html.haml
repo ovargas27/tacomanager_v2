@@ -1,12 +1,9 @@
 %h1
   Vendors
 %p
+  = render 'new', :vendor => @new_vendor 
+%p
   = paginate @vendors
-  = link_to 'New Vendor', '#new_vendor', :class => 'inline'
 
 #vendors
   = render @vendors
-
-%div{ :style => "display:none"}
-  #new_vendor
-    = render 'new', :vendor => @vendor

@@ -1,10 +1,19 @@
-= form_for vendor, :remote => true do |form|
-  #errors
-  %p
-    = label_tag 'Name'
-    = form.text_field :name
-  %p
-    = label_tag 'Phone'
-    = form.text_field :phone
-  %p
-    = form.submit
+#new_vendor.vendor
+  .show
+    = link_to 'New Vendor', '#new_vendor', :class => 'editablebox'
+  .edit
+    = form_for vendor, :remote => true do |form|
+      #errors
+      %p
+        = form.label :name, 'Name'
+        = form.text_field :name
+      %p
+        = label_tag 'Phone'
+        = form.text_field :phone
+      %p
+        = form.submit 'Save'
+
+:javascript
+  $(document).ready(function () {
+    $('#new_vendor').editable();
+  });

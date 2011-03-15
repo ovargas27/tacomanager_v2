@@ -1,0 +1,5 @@
+#errors
+- unless errors.empty?
+  = render 'shared/error', :collection => errors.to_a
+  - p errors
+%p= errors

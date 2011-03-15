@@ -2,7 +2,5 @@
   $('#errors').html('<%= errors_for @vendor %>');
 <% else %>
   $('#vendor_<%= @vendor.id %>').replaceWith("<%= escape_javascript(render @vendor) %>");
-  $('#vendor_<%= @vendor.id %>').animate({opacity: 0.4}, 1500);
-  $.fancybox.close();
-  $('#vendor_<%= @vendor.id %> .edit a').fancybox();
+  $('#vendor_<%= @vendor.id %> .show').addClass('edited')
 <% end %>

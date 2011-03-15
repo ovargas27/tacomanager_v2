@@ -2,6 +2,6 @@
   $('#errors').html('<%= errors_for @vendor %>');
 <% else %>
   $('#vendors').prepend("<%= escape_javascript(render @vendor) %>");
-  $.fancybox.close();
-  $('#vendor_<%= @vendor.id %> .edit a').fancybox();
+  $('#vendor_<%= @vendor.id %> .show').addClass('new')
+  $('#new_vendor').replaceWith("<%= escape_javascript(render 'new', :vendor => @new_vendor) %>");
 <% end %>
