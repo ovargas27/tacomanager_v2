@@ -1,9 +1,9 @@
-%h1
-  Vendors
-%p
-  = render 'new', :vendor => @new_vendor 
-%p
-  = paginate @vendors
+%h1 
+  Welcome
+.welcome 
+  I wanna taco. And you?
+%p= render 'new', :vendor => @new_vendor 
+%p= paginate @vendors
 
 #vendors
   = render @vendors
