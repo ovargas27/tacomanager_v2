@@ -7,9 +7,7 @@ feature "Manage Vendors Feature", %q{
 } do
 
   scenario "new vendor" do
-    visit new_vendor 
-    fill_in 'vendor_name', :with => 'alpha'
-    click_button('Create Vendor')
+    pending ''
   end
 
   scenario "index" do
